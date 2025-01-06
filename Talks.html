@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talks & Presentations - Mahesh Rajarapu</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #222;
+            color: #ddd;
+        }
+
+        .social-bar {
+            width: 100%;
+            height: 1.5cm;
+            background-color: #333;
+            border-bottom: 2px solid orange;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .social-bar .logo-title {
+            font-family: 'serif', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-bar {
+            width: 100%;
+            height: 1.5cm;
+            background-color: #333;
+            border-bottom: 2px solid orange;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .social-bar .logo-title {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            padding-left: 30px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #444;
+            transition: background-color 0.3s, transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background-color: orange;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+            padding-top: 100px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #444;
+            color: orange;
+        }
+
+        .social-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: orange;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+            padding-top: 100px;
+        }
+
+        .presentation-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .presentation-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: fade-in 0.8s ease-in-out;
+        }
+
+        .presentation-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .presentation-item img {
+            width: 40%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .content-box {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .content-box h3 {
+            font-size: 22px;
+            font-family: 'serif';
+            color: rgb(0, 255, 251);
+            margin: 0;
+        }
+
+        .content-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .content-box .slides-button {
+            padding: 10px 20px;
+            background-color: purple;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .content-box .slides-button:hover {
+            background-color: #555;
+            color: orange;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Bar -->
+    <div class="social-bar">
+        <div class="logo-title">Talks & Presentations</div>
+        <div class="social-links">
+            <a href="Main.html" id="main-link">Home</a>
+            <a href="About.html" id="about-link">About</a>
+            <a href="Resume.html" id="resume-link">Resume</a>
+            <a href="Reports.html" id="reports-link">Reports/Notes</a>
+            <a href="Publications.html" id="publications-link">Publications</a>
+            <a href="Talks.html" id="talks-link">Talks & Presentations</a>
+        </div>
+    </div>
+
+    <!-- Talks & Presentations Content -->
+    <div class="container">
+        <h1>Recent Talks & Presentations</h1>
+        <div class="presentation-section">
+            <!-- Presentation 1 -->
+            <div class="presentation-item">
+                <img src="Screenshot 2025-01-06 221056.png" alt="Presentation 1">
+                <div class="content-box">
+                    <h3>Presentation on Neural Networks for Approximation and Reconstruction</h3>
+                    <p>Delivered as part of the dissertation preliminaries, this presentation provides a comprehensive overview of the fundamentals of neural networks, their operational mechanisms, and the processes of approximation and reconstruction. Guided by Dr. Shivam Bajpeyi.</p>
+                    <a href="https://drive.google.com/file/d/141I_IhTEutg10-iFxYBRPsIdFs-Wpdm8/view?usp=sharing" class="slides-button">Click here for slides</a>
+                </div>
+            </div>            
+            
+
+            <!-- Presentation 2 -->
+            <div class="presentation-item">
+                <img src="WhatsApp Image 2025-01-06 at 22.15.22_27dd550d.jpg" alt="Presentation 2">
+                <div class="content-box">
+                    <h3>Internship Insights Seminar</h3>
+                    <p>Delivered a talk titled "Internship Insights" as part of the weekly Zero Hour in the Department of Mathematics, SVNIT, sharing my experiences and discussing various internship opportunities available for second-year students.</p>
+
+                    <a href="https://drive.google.com/file/d/1ecVThhRjRAdHZFqB3ouicHUuguptNgmP/view?usp=sharing" class="slides-button">Click here for slides</a>
+                </div>
+            </div>
+
+            <!-- Presentation 3 -->
+            <div class="presentation-item">
+                <img src="kaist.jpg" alt="Presentation 3">
+                <div class="content-box">
+                    <h3>Self-Introduction and Research Motivation Presentation</h3>
+                    <p>Delivered a presentation at the opening ceremony of the KAI-X internship program at Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea. The talk highlighted my self-introduction, research motivations, and the key objectives of my work.</p>
+
+                    <a href="https://drive.google.com/file/d/1WdyCQak-yxrQ3rSiMi9j0sScqaY_gXPO/view?usp=sharing" class="slides-button">Click here for slides</a>
+                </div>
+            </div>
+
+            <!-- Presentation 4 -->
+            <div class="presentation-item">
+                <img src="1685826178752.jpg" alt="Presentation 4">
+                <div class="content-box">
+                    <h3>”Low Cost Sanitary Pad Product Manufacturing Machine” in Indian Institute of Technology, Delhi (”UNNATI” MAHOTSAV) and this Project/Machine designed under the UNNAT BHARAT ABHIYAN</h3>
+                    <p>We had the honor of presenting our project, "Making of sanitary pads using low-cost and eco-friendly machinery," at the national-level event ‘MAHOTSAV & EXPO UNNATI-Unnat Bharat Abhiyan’ held at IIT Delhi. Representing Sardar Vallabhbhai National Institute of Technology under the Participating Institute Unnat Bharat Abhiyan (PIUBA), our project was selected among 75 innovative projects in the Basic Amenities category. The event provided a platform to showcase our work, connect with experts, and share the potential impact of our solution on improving sanitary pad access. This experience inspired us, fostered collaboration, and strengthened our resolve to develop impactful, sustainable technologies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

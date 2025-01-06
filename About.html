@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mahesh Rajarapu</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #121212;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #333; /* Darker grey from main page */
+            color: #fff; /* White text */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            width: 100%;
+            height: 60px;
+            background-color: #333;
+            border-bottom: 2px solid orange;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .nav-bar .logo-title {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #444;
+            color: orange;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: orange;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Container and Content */
+        .container {
+            width: 90%; /* Increased width for landscape */
+            margin: 100px auto 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2.section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: orange;
+            border-left: 5px solid orange;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .profile img {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+
+        .profile-text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Education Section */
+        .education-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .education-card h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #9000ff;
+            margin-bottom: 10px;
+        }
+
+        .education-card p {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid orange;
+        }
+
+        .skill-card h4 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4caf50;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Lists */
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .list-item {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .skills {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>About - Mahesh Rajarapu</header>
+    <div class="nav-bar">
+        <div class="logo-title">About</div>
+        <div class="nav-links">
+            <a href="Main.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Reports.html">Reports/Notes</a>
+            <a href="Publications.html">Publications</a>
+            <a href="Talks.html">Talks & Presentations</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Education Section -->
+        <h2 class="section-title">Education</h2>
+        <div class="education-card">
+            <h3>Integrated M.Sc. in Mathematics</h3>
+            <p>Sardar Vallabhbhai National Institute of Technology (SVNIT), Surat, Gujarat - 2025 (expected)</p>
+        </div>
+        <div class="education-card">
+            <h3>Higher Secondary</h3>
+            <p>Sri Sarada Educational Institution, Vijayawada, Andhra Pradesh - 2020</p>
+        </div>
+        <div class="education-card">
+            <h3>SSC</h3>
+            <p>Bhashyam E.M High School, Bhavanipuram, Andhra Pradesh - 2018</p>
+        </div>
+
+        <!-- Research Areas Section -->
+        <h2 class="section-title">Research Areas</h2>
+        <ul>
+            <li class="list-item">Advancing research in neural network approximation, biometrics, and machine learning for facial image quality improvement and computer vision.</li>
+            <li class="list-item">Exploring automated graphics generation and real-time image processing using deep learning techniques.</li>
+            <li class="list-item">Specializing in predictive modeling, regression analysis, and correlation studies for data-driven solutions.</li>
+            <li class="list-item">Developing advanced image reconstruction and enhancement methods with neural network-based approaches.</li>
+            <li class="list-item">Keen on bridging the gap between artificial intelligence and mathematics through innovative research.</li>
+        </ul>
+        
+
+        <!-- Skills Section -->
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            <div class="skill-card">
+                <h4>Programming Skills</h4>
+                <p>Python, C, SQL, MATLAB</p>
+            </div>
+            <div class="skill-card">
+                <h4>Deep Learning Frameworks</h4>
+                <p>TensorFlow, PyTorch, JAX, Flax, Keras</p>
+            </div>
+            <div class="skill-card">
+                <h4>Machine Learning Frameworks</h4>
+                <p>Scikit-Learn, XGBoost, LightGBM</p>
+            </div>
+            <div class="skill-card">
+                <h4>Version Control Tools</h4>
+                <p>Git, GitHub</p>
+            </div>
+            <div class="skill-card">
+                <h4>Web Development</h4>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <h4>Mathematical Tools</h4>
+                <p>Wolfram Mathematica, Excel</p>
+            </div>
+            <div class="skill-card">
+                <h4>Data Science</h4>
+                <p>Pandas, NumPy, Scikit-Learn, Power BI</p>
+            </div>
+            <div class="skill-card">
+                <h4>Other Skills</h4>
+                <p>Canva(Designing), LaTeX, MS Office</p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

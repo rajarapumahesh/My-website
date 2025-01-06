@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports/Notes/Articles - Mahesh Rajarapu</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #222;
+            color: #ddd;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-bar {
+            width: 100%;
+            height: 1.5cm;
+            background-color: #333;
+            border-bottom: 2px solid orange;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .social-bar .logo-title {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: bold;
+            padding-left: 30px;
+            color: orange;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #444;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: orange;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #444;
+            color: orange;
+        }
+
+        .social-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: orange;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px 0;
+            padding-top: 100px;
+        }
+
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .section {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: rgb(103, 0, 200);
+            margin-bottom: 15px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid orange;
+            background-color: #444;
+            border-radius: 8px;
+        }
+
+        .item h3 {
+            font-size: 20px;
+            color: orange;
+        }
+
+        .item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .button-container {
+            margin-top: 10px;
+        }
+
+        .button {
+            padding: 8px 16px;
+            font-size: 14px;
+            color: #fff;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #333;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+            color: #ddd;
+            position: relative;
+        }
+
+        .modal-content h3 {
+            color: orange;
+        }
+
+        .modal-content textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .modal-content .button {
+            background-color: orange;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content .button:hover {
+            background-color: #555;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Update section styles */
+        .update-section {
+            margin-top: 40px;
+            text-align: center;
+            background-color: #333;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .update-section h3 {
+            font-size: 24px;
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        .update-section p {
+            font-size: 18px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Bar -->
+    <div class="social-bar">
+        <div class="logo-title">Reports/Notes/Articles</div>
+        <div class="social-links">
+            <a href="Main.html" id="main-link">Home</a>
+            <a href="About.html" id="about-link">About</a>
+            <a href="Resume.html" id="resume-link">Resume</a>
+            <a href="Reports.html" id="reports-link">Reports/Notes</a>
+            <a href="Publications.html" id="publication-link">Publications</a>
+            <a href="Talks.html" id="talks-link">Talks & Presentations</a>
+        </div>
+    </div>
+
+    <!-- Container Section -->
+    <div class="container">
+        <div class="content-section">
+            <!-- Reports Section -->
+            <div class="section">
+                <h2>Reports</h2>
+
+                <div class="item">
+                    <h3>Report 1: Advanced Denoising and Reconstruction Techniques in Medical Imaging</h3>
+                    <p>Final summary report presented during the KAI-X internship at KAIST, South Korea. It focuses on advanced techniques like Simultaneous Iterative Reconstruction Technique (SIRT), Total Variation (TV) Denoising, and neural networks to enhance CT image quality, reduce noise, and preserve critical details in medical diagnostics.</p>
+                    <div class="button-container">
+                        <a href="https://drive.google.com/file/d/19-LAuoAaoHO5VYWKp9E6wb42lExk5kLe/view?usp=sharing" class="button">View</a>
+                        <a href="#" class="button comment-btn" data-id="1">Comment</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <h3>Report 2: Automated Image Enhancement</h3>
+                    <p>An in-depth report on advanced techniques for automated image enhancement using machine learning and deep learning models, presented as part of the IAS-INSA-NASI summer research fellowship, conducted under the guidance of Dr. Sudarshan Iyengar at IIT Ropar.</p>
+
+                    <div class="button-container">
+                        <a href="https://drive.google.com/file/d/1PhqV8zTe_w7YIez7ok4oeNXpkkd5CsXL/view?usp=sharing" class="button">View</a>
+                        <a href="#" class="button comment-btn" data-id="1">Comment</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Report 3: DBSA Algorithm Implementation</h3>
+                    <p>A detailed report on the implementation and optimization of the Dynamic Block Scheduling Algorithm (DBSA) for high-performance computing tasks, conducted under the guidance of Dr. Pranesh Das at NIT Calicut.</p>
+
+                    <div class="button-container">
+                        <a href="https://drive.google.com/file/d/1onOPncs8Pw28DdLKhR4E88i5zhfEmnsy/view?usp=sharing" class="button">View</a>
+                        <a href="#" class="button comment-btn" data-id="2">Comment</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes Section -->
+            <div class="section">
+                <h2>Notes</h2>
+                <div class="item">
+                    <h3>Note 1: MAID Algorithms</h3>
+                    <p>Comprehensive notes on Machine Learning, Artificial Intelligence, and Deep Mining algorithms. This document is currently in progress and will be updated with detailed explanations and implementations.</p>
+                    <div class="button-container">
+                        <a href="https://drive.google.com/file/d/1sNbt3bW_6L4ADLZxvupYotcMjkOKgztr/view?usp=sharing" class="button">View</a>
+                        <a href="#" class="button comment-btn" data-id="3">Comment</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Note 2: Probability and Statistics</h3>
+                    <p>Key notes on fundamental concepts in probability and statistics, including distributions, estimations, and hypothesis testing.</p>
+                    <div class="button-container">
+                        <a href="https://drive.google.com/file/d/15NKp2DQhHJTLM26s6bHmorjOTO0IyaBy/view?usp=sharing" class="button">View</a>
+                        <a href="#" class="button comment-btn" data-id="4">Comment</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Articles Section -->
+            <div class="section">
+                <h2>Articles</h2>
+                <div class="item">
+                    <h3>Article 1: Functional Analysis and its Unique Role in Understanding Deep Learning, Machine Learning, and Neural Networks</h3>
+                    <p>This article examines the contributions of functional analysis to deep learning, machine learning, and neural networks, highlighting its theoretical and practical applications in understanding these computational frameworks.</p>
+
+                    <div class="button-container">
+                        <a href="https://drive.google.com/file/d/1BU508EUu1VbKTIyJOl34HpRY4d-O-0oN/view?usp=sharing" class="button">View</a>
+                        <a href="#" class="button comment-btn" data-id="5">Comment</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Article 2: Examination – Origin, Evolution, and Future</h3>
+                    <p>This article discusses the origin and evolution of examinations, their current significance, potential future trends, and how students can approach them effectively for success. It also highlights areas where improvements are needed in modern examination systems.</p>
+
+                    <div class="button-container">
+                        <a href="https://drive.google.com/file/d/1AYV5wpQOl0v7ZgsnSQCt_s6YBoHZDmmS/view?usp=sharing" class="button">View</a>
+                        <a href="#" class="button comment-btn" data-id="6">Comment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Update Section -->
+        <div class="update-section">
+            <h3>Upcoming Content</h3>
+            <p>To be updated soon...</p>
+        </div>
+    </div>
+
+    <!-- Comment Modal -->
+    <div id="comment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Leave a Comment</h3>
+            <form id="comment-form" action="https://script.google.com/macros/s/AKfycbyDDEKPdSZF3_maxvOLqXmcnU1oNuwyjkx4TUY5w5Ut2zBNa-oT_SNOtIFjvTArUx4m/exec" method="doPost">
+                <input type="hidden" name="report_id" id="report-id">
+                <textarea name="comment" placeholder="Write your comment here..." rows="4" required></textarea>
+                <button type="submit" class="button">Submit</button>
+            </form>
+                       
+        </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+        const modal = document.getElementById('comment-modal');
+        const commentButtons = document.querySelectorAll('.comment-btn');
+        const closeBtn = document.querySelector('.close-btn');
+        const commentForm = document.getElementById('comment-form');
+        let currentReportId = null;
+
+        commentButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                currentReportId = button.getAttribute('data-id');  // Get the report ID from the button
+                document.getElementById('report-id').value = currentReportId;  // Set the hidden input value
+                modal.style.display = 'block';
+            });
+        });
+
+
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        }); 
+
+        window.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        commentForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const commentText = e.target.comment.value;
+            saveCommentToGoogleSheet(currentReportId, commentText);
+            alert('Thank you! Your comment has been submitted.');
+            e.target.reset();
+            modal.style.display = 'none';
+        });
+
+        function saveCommentToGoogleSheet(reportId, commentText) {
+            // Use Google Apps Script to save the comment to Google Sheets.
+            // Add the Google Apps Script URL that processes the comment submission here.
+            const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new URLSearchParams({
+                    'report_id': reportId,
+                    'comment': commentText
+                })
+            })
+            .then(response => response.text())
+            .then(result => {
+                console.log('Success:', result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
