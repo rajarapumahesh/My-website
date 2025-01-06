@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Mahesh Rajarapu Portfolio</title>
     <style>
+        /* General Styles */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -31,7 +32,6 @@
             margin-bottom: 20px;
         }
 
-        /* Menu items in sidebar */
         .sidebar nav {
             margin-top: 30px;
         }
@@ -53,38 +53,47 @@
             background-color: orange;
         }
 
-        /* Contact info below the image in sidebar */
         .contact-info {
             margin-top: 30px;
+            width: 80%;
+            background: linear-gradient(145deg, #342f2f, #1d1924);
+            border-radius: 15px;
+            padding: 20px;
             text-align: left;
-            color: #fff;
-            width: 80%;  /* Align with menu items */
         }
 
         .contact-info p {
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         .contact-info a {
-            color: orange;
-            text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
+            text-decoration: none;
+            color: #8e1be0;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            transition: all 0.3s ease-in-out;
         }
 
         .contact-info a img {
             width: 20px;
             height: 20px;
+            margin-right: 8px;
+            transition: transform 0.3s ease-in-out;
         }
 
-        /* Main Content Area */
-        .main-content {
-            margin-left: 20%;
-            padding: 20px;
-            padding-top: 80px;
+        .contact-info a:hover {
+            color: #ff720c;
+            transform: scale(1.05);
         }
 
+        .contact-info a:hover img {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        /* Social Bar Styles */
         .social-bar {
             width: 100%;
             height: 1.5cm;
@@ -93,7 +102,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 0px;
+            padding: 0 30px;
             position: fixed;
             top: 0;
             left: 0;
@@ -104,7 +113,6 @@
             font-family: 'serif', serif;
             font-size: 24px;
             font-weight: bold;
-            padding-left: 30px;
             color: rgb(0, 183, 255);
         }
 
@@ -116,27 +124,9 @@
         .social-links a {
             color: #fff;
             text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #444;
-            transition: background-color 0.3s;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            align-items: center;  /* Vertically align the logos */
-        }
-
-        .social-links a:hover {
-            background-color: orange;
-        }
-
-        .social-links a {
-            color: #fff;
-            text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
+            background-color: #444;
             position: relative;
             overflow: hidden;
             transition: background-color 0.3s, color 0.3s;
@@ -164,8 +154,13 @@
             transform: scaleX(1);
         }
 
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 20%;
+            padding: 20px;
+            padding-top: 80px;
+        }
 
-        /* Landscape Frame Styles */
         .landscape-frame {
             width: 29cm;
             height: 5cm;
@@ -187,25 +182,22 @@
             border-radius: 10px;
         }
 
-        
-
-        .landscape-frame .quote {
+        .quote-text {
             position: absolute;
-            bottom: 50%;
-            width: 24cm;
-            left: 50%;
-            transform: translate(-50%, 50%);
-            color: #fff;
-            font-style: italic;
+            top: 50%;
+            left: 64%;
+            width: 25cm;
+            transform: translate(-50%, -50%);
             font-size: 16px;
-            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            max-width: 68%;
         }
 
         .quote-author {
-      font-size: 20px;
-      margin-top: 10px;
-      font-style: Georgia;
-    }
+            font-size: 20px;
+            margin-top: 10px;
+            font-family: Georgia, serif;
+        }
 
         .profile-section {
             display: flex;
@@ -224,63 +216,6 @@
             height: 200px;
         }
 
-        .contact-info {
-        background: linear-gradient(145deg, #342f2f, #1d1924);
-        border-radius: 15px;
-        padding: 20px;
-        
-        max-width: 200px;
-        margin: auto;
-    }
-
-    .contact-info p {
-        margin: 15px 0;
-    }
-
-    .contact-info a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #8e1be0;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    line-height: 24px; /* Ensures the text aligns well with the icon height */
-}
-
-
-    .contact-info a:hover {
-        color: #ff720c;
-        transform: scale(1.05);
-    }
-
-    .contact-info img {
-    width: 18px;  /* Adjust the icon size to match text height */
-    height: 18px;
-    margin-right: 8px; /* Slightly reduce the margin for better spacing */
-    transition: transform 0.3s ease-in-out;
-    vertical-align: middle; /* Ensures perfect vertical alignment */
-    }
-
-    .contact-info a:hover img {
-        transform: rotate(10deg) scale(1.1);
-    }
-
-
-    .contact-info {
-    margin-bottom: 140px; /* Adds space below the contact info section */
-    }
-    .updates-section {
-        margin-top: 0px; /* Removes unnecessary space above the table */
-    }
-
-
-
-        .reach-out {
-            text-align: center;
-            margin-top: 40px;
-        }
-
         .reach-out {
             text-align: center;
             margin-top: 40px;
@@ -288,8 +223,7 @@
 
         .reach-out p {
             font-size: 20px;
-            color: #fff; /* Light color text */
-            display: inline; /* Prevent line break */
+            display: inline;
         }
 
         .contact-box {
@@ -301,40 +235,22 @@
             color: #fff;
             text-align: center;
             width: 150px;
-            margin-left: 10px; /* Adds space between the text and the links */
+            margin-left: 10px;
         }
 
         .linkedin {
-            background-color: #8e44ad; /* Purple color */
+            background-color: #8e44ad;
         }
 
         .email {
-            background-color: #e74c3c; /* Red color */
+            background-color: #e74c3c;
         }
 
         .contact-box:hover {
-            opacity: 0.8; /* Slight transparency effect */
+            opacity: 0.8;
         }
 
-
-        .contact-info img {
-            width: 20px;  /* Adjust the size of the logo */
-            height: 10px;
-            margin-right: 10px;  /* Adds some space between the icon and the text */
-        }
-        .quote-text {
-            position: absolute;
-            top: 50%;
-            left: 64%;
-            width: 25cm;
-            transform: translate(-50%, -50%);
-            font-size: 16px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            max-width: 68%;
-            }
-
-
-        /* Updates Section Styles */
+        /* Updates Section */
         .updates-section {
             margin-top: 30px;
             max-height: 250px;
@@ -372,30 +288,23 @@
         <img src="mahesh1.png" alt="Mahesh Portrait">
         <p align="center">Mahesh Rajarapu<br>Int. M.Sc. student at SVNIT, India</p>
 
-        <!-- Contact info below image -->
         <div class="contact-info">
-            <p>  <a href="mailto:rajarapumahesh26@gmail.com">
-                    <img src="email-logo.png" alt="Email"> Email
-                </a>
-            </p>
-            <p> <a href="https://x.com/Mahesh262002" target="_blank">
-                    <img src="twitter-logo.png" alt="Twitter"> Twitter
-                </a>
-            </p>
-            <p> <a href="https://www.linkedin.com/in/rajarapu-mahesh-4ab06a1a9/" target="_blank">
-                    <img src="linkedin-logo.png" alt="LinkedIn"> LinkedIn
-                </a>
-            </p>
+            <p><a href="mailto:rajarapumahesh26@gmail.com">
+                <img src="email-logo.png" alt="Email"> Email
+            </a></p>
+            <p><a href="https://x.com/Mahesh262002" target="_blank">
+                <img src="twitter-logo.png" alt="Twitter"> Twitter
+            </a></p>
+            <p><a href="https://www.linkedin.com/in/rajarapu-mahesh-4ab06a1a9/" target="_blank">
+                <img src="linkedin-logo.png" alt="LinkedIn"> LinkedIn
+            </a></p>
             <p><a href="https://github.com/rajarapumahesh" target="_blank">
-                    <img src="github-logo.png" alt="GitHub"> GitHub
-                </a>
-            </p>
+                <img src="github-logo.png" alt="GitHub"> GitHub
+            </a></p>
             <p><a href="https://www.researchgate.net/profile/Mahesh-Rajarapu" target="_blank">
-                    <img src="researchgate.png" alt="researchgate"> Research Gate
-                </a>
-            </p>
+                <img src="researchgate.png" alt="ResearchGate"> ResearchGate
+            </a></p>
         </div>
-        
     </div>
 
     <div class="main-content">
@@ -411,15 +320,14 @@
             </div>
         </div>
 
-        <h2>Hi. I am Mahesh!!</h2>
         <div class="landscape-frame">
-            <img src="landscape image.jpg" alt="Landscape Image">
+            <img src="landscape image.jpg" alt="Landscape">
             <div class="quote-text">
                 “I believe that <strong>‘Experience’</strong> is the word driving our entire world and universe. Every action, movement, and endeavor of humanity is ultimately motivated by the desire to gain new experiences.”
                 <br>
-                <div class="quote-author">- Mahesh Rajarapu</div>
+                <div class="quote-author">Mahesh Rajarapu</div>
             </div>
-        </div>        
+        </div>
 
         <div class="profile-section">
             <div class="info">
@@ -449,6 +357,7 @@
 
             </div>
         </div>
+        
 
         <div class="updates-section">
             <h3>Academic Updates (June 2020 - Present)</h3>
