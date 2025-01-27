@@ -54,16 +54,16 @@
         }
 
         .contact-info {
-            margin-top: 30px;
-            width: 80%;
+            margin-top: 10px;
+            width: 70%;
             background: linear-gradient(145deg, #342f2f, #1d1924);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: left;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
         }
 
         .contact-info p {
-            margin: 15px 0;
+            margin: 1px 0;
         }
 
         .contact-info a {
@@ -80,13 +80,17 @@
         .contact-info a img {
             width: 20px;
             height: 20px;
-            margin-right: 8px;
+            margin-right: 6px;
             transition: transform 0.3s ease-in-out;
         }
 
         .contact-info a:hover {
             color: #ff720c;
             transform: scale(1.05);
+        }
+
+        .contact-info a:hover img {
+            transform: rotate(10deg) scale(1.1);
         }
 
         .contact-info a:hover img {
@@ -281,12 +285,42 @@
         .updates-table tr:nth-child(odd) {
             background-color: #222;
         }
+        #like-section {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Small gap between the heart icon and the count */
+            margin-top: 10px; /* Adjust spacing as needed */
+        }
+
+        #like-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        #like-button img {
+            width: 20px; /* Smaller heart icon */
+            height: 20px;
+        }
+
+        #like-count {
+            font-size: 14px; /* Smaller font size */
+            color: #fff; /* Match your theme */
+        }
+
     </style>
 </head>
 <body>
     <div class="sidebar">
         <img src="mahesh1.png" alt="Mahesh Portrait">
         <p align="center">Mahesh Rajarapu<br>Int. M.Sc. student at SVNIT, India</p>
+        <div id="like-section" style="display: flex; align-items: center; gap: 5px;">
+            <button id="like-button" style="background: none; border: none; cursor: pointer; padding: 0;">
+                <img src="love-icon.png" alt="Love" style="width: 20px; height: 20px;">
+            </button>
+            <span id="like-count" style="font-size: 14px; color: #fff;">0</span>
+        </div>        
 
         <div class="contact-info">
             <p><a href="mailto:rajarapumahesh26@gmail.com">
@@ -433,5 +467,46 @@
         
         
     </div>
+    <script>
+        // Initialize like count from localStorage or set to 0
+        let likes = parseInt(localStorage.getItem("likeCount")) || 0;
+        const hasLiked = localStorage.getItem("hasLiked") === "true";
+    
+        // Get the like count, button, and reset button elements
+        const likeCount = document.getElementById("like-count");
+        const likeButton = document.getElementById("like-button");
+        const resetButton = document.getElementById("reset-button");
+    
+        // Update the like count on page load
+        likeCount.textContent = likes;
+    
+        // Disable the button if the user has already liked
+        if (hasLiked) {
+            likeButton.disabled = true;
+        }
+    
+        // Event listener for the like button
+        likeButton.addEventListener("click", () => {
+            if (!hasLiked) {
+                likes++;
+                likeCount.textContent = likes;
+                localStorage.setItem("likeCount", likes);
+                localStorage.setItem("hasLiked", "true");
+                likeButton.disabled = true;
+            }
+        });
+    
+        // Event listener for the reset button
+        resetButton.addEventListener("click", () => {
+            // Clear localStorage values
+            localStorage.removeItem("likeCount");
+            localStorage.removeItem("hasLiked");
+    
+            // Reset variables and UI
+            likes = 0;
+            likeCount.textContent = likes;
+            likeButton.disabled = false;
+        });
+    </script>
 </body>
 </html>
