@@ -468,44 +468,23 @@
         
     </div>
     <script>
-        // Initialize like count from localStorage or set to 0
-        let likes = parseInt(localStorage.getItem("likeCount")) || 0;
-        const hasLiked = localStorage.getItem("hasLiked") === "true";
+        // Get the like count from the server when the page loads
+        fetch('/get-likes')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("like-count").textContent = data.likeCount;
+            });
     
-        // Get the like count, button, and reset button elements
-        const likeCount = document.getElementById("like-count");
-        const likeButton = document.getElementById("like-button");
-        const resetButton = document.getElementById("reset-button");
-    
-        // Update the like count on page load
-        likeCount.textContent = likes;
-    
-        // Disable the button if the user has already liked
-        if (hasLiked) {
-            likeButton.disabled = true;
-        }
-    
-        // Event listener for the like button
-        likeButton.addEventListener("click", () => {
-            if (!hasLiked) {
-                likes++;
-                likeCount.textContent = likes;
-                localStorage.setItem("likeCount", likes);
-                localStorage.setItem("hasLiked", "true");
-                likeButton.disabled = true;
-            }
-        });
-    
-        // Event listener for the reset button
-        resetButton.addEventListener("click", () => {
-            // Clear localStorage values
-            localStorage.removeItem("likeCount");
-            localStorage.removeItem("hasLiked");
-    
-            // Reset variables and UI
-            likes = 0;
-            likeCount.textContent = likes;
-            likeButton.disabled = false;
+        // Add event listener for the like button
+        document.getElementById("like-button").addEventListener("click", () => {
+            fetch('/like', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    // Update the like count on the page
+                    document.getElementById("like-count").textContent = data.likeCount;
+                    // Disable the button once liked
+                    document.getElementById("like-button").disabled = true;
+                });
         });
     </script>
     
