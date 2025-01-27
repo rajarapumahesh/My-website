@@ -472,10 +472,11 @@
         let likes = parseInt(localStorage.getItem("likeCount")) || 0;
         const hasLiked = localStorage.getItem("hasLiked") === "true";
     
-        // Get the like count and button elements
+        // Get the like count, button, and reset button elements
         const likeCount = document.getElementById("like-count");
         const likeButton = document.getElementById("like-button");
-        
+        const resetButton = document.getElementById("reset-button");
+    
         // Update the like count on page load
         likeCount.textContent = likes;
     
@@ -489,14 +490,22 @@
             if (!hasLiked) {
                 likes++;
                 likeCount.textContent = likes;
-    
-                // Save the updated like count and prevent further likes for this user
                 localStorage.setItem("likeCount", likes);
                 localStorage.setItem("hasLiked", "true");
-    
-                // Disable the like button to prevent further clicking
                 likeButton.disabled = true;
             }
+        });
+    
+        // Event listener for the reset button
+        resetButton.addEventListener("click", () => {
+            // Clear localStorage values
+            localStorage.removeItem("likeCount");
+            localStorage.removeItem("hasLiked");
+    
+            // Reset variables and UI
+            likes = 0;
+            likeCount.textContent = likes;
+            likeButton.disabled = false;
         });
     </script>
     
