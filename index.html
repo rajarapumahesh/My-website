@@ -468,23 +468,21 @@
         
     </div>
     <script>
-        // Get the like count from the server when the page loads
-        fetch('/get-likes')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("like-count").textContent = data.likeCount;
-            });
-    
-        // Add event listener for the like button
-        document.getElementById("like-button").addEventListener("click", () => {
-            fetch('/like', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    // Update the like count on the page
-                    document.getElementById("like-count").textContent = data.likeCount;
-                    // Disable the button once liked
-                    document.getElementById("like-button").disabled = true;
-                });
+        // Initialize like count from localStorage or set to 0
+        let likes = parseInt(localStorage.getItem("likeCount")) || 0;
+
+        // Get the like count and button elements
+        const likeCount = document.getElementById("like-count");
+        const likeButton = document.getElementById("like-button");
+
+        // Update the like count on page load
+        likeCount.textContent = likes;
+
+        // Event listener for the like button
+        likeButton.addEventListener("click", () => {
+            likes++;
+            likeCount.textContent = likes;
+            localStorage.setItem("likeCount", likes);
         });
     </script>
     
