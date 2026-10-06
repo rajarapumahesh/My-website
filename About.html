@@ -4,280 +4,313 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Mahesh Rajarapu</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #121212;
-            color: #e0e0e0;
-            overflow-x: hidden;
-        }
-
-        header {
-            background-color: #333; /* Darker grey from main page */
-            color: #fff; /* White text */
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Navigation Bar */
-        .nav-bar {
-            width: 100%;
-            height: 60px;
-            background-color: #333;
-            border-bottom: 2px solid orange;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 30px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 100;
-        }
-
-        .nav-bar .logo-title {
-            font-family: 'Georgia', serif;
-            font-size: 24px;
-            font-weight: bold;
-            color: orange;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            font-size: 16px;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            position: relative;
-            overflow: hidden;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .nav-links a:hover {
-            background-color: #444;
-            color: orange;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: orange;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .nav-links a:hover::after {
-            transform: scaleX(1);
-        }
-
-        /* Container and Content */
-        .container {
-            width: 90%; /* Increased width for landscape */
-            margin: 100px auto 40px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        h2.section-title {
-            font-size: 28px;
-            font-weight: 700;
-            color: orange;
-            border-left: 5px solid orange;
-            padding-left: 10px;
-            margin-bottom: 20px;
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .profile img {
-            width: 0;
-            height: 0;
-            visibility: hidden;
-        }
-
-        .profile-text {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* Education Section */
-        .education-card {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .education-card h3 {
-            font-size: 20px;
-            font-weight: bold;
-            color: #9000ff;
-            margin-bottom: 10px;
-        }
-
-        .education-card p {
-            font-size: 14px;
-            color: #bbb;
-        }
-
-        /* Skills Section */
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-card {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border: 2px solid orange;
-        }
-
-        .skill-card h4 {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #4caf50;
-        }
-
-        .skill-card p {
-            font-size: 14px;
-            color: #ccc;
-        }
-
-        /* Lists */
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-
-        .list-item {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #ccc;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .profile {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .skills {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/enhancements.css">
+    <script src="assets/js/enhancements.js" defer>
+</script>
+    <meta name="description" content="Mahesh Rajarapu, Ph.D. researcher at IIT Tirupati. Computer vision, document intelligence, privacy-preserving systems, and research software.">
+    <meta name="theme-color" content="#222222">
+<link rel="canonical" href="https://rajarapumahesh.github.io/My-website/About.html">
+<meta property="og:title" content="About - Mahesh Rajarapu">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rajarapumahesh.github.io/My-website/About.html">
+<meta property="og:image" content="https://rajarapumahesh.github.io/My-website/assets/images/mahesh_profile.jpg">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
     <header>About - Mahesh Rajarapu</header>
     <div class="nav-bar">
         <div class="logo-title">About</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Resume.html">Resume</a>
-            <a href="Reports.html">Reports/Notes</a>
-            <a href="Publications.html">Publications</a>
-            <a href="Talks.html">Talks & Presentations</a>
-        </div>
+        <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">Menu ☰</button>
+<nav class="nav-links" id="site-navigation" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="About.html" aria-current="page">About</a>
+<a href="Resume.html">Resume</a>
+<a href="Reports.html">Reports/Notes</a>
+<a href="Publications.html">Publications</a>
+<a href="Projects.html">Projects</a>
+<a href="Talks.html">Talks & Presentations</a>
+</nav>
     </div>
 
-    <div class="container">
-        <!-- Education Section -->
-        <h2 class="section-title">Education</h2>
-        <div class="education-card">
-            <h3>Integrated M.Sc. in Mathematics</h3>
-            <p>Sardar Vallabhbhai National Institute of Technology (SVNIT), Surat, Gujarat - 2025 (expected)</p>
-        </div>
-        <div class="education-card">
-            <h3>Higher Secondary</h3>
-            <p>Sri Sarada Educational Institution, Vijayawada, Andhra Pradesh - 2020</p>
-        </div>
-        <div class="education-card">
-            <h3>SSC</h3>
-            <p>Bhashyam E.M High School, Bhavanipuram, Andhra Pradesh - 2018</p>
-        </div>
-
-        <!-- Research Areas Section -->
-        <h2 class="section-title">Research Areas</h2>
-        <ul>
-            <li class="list-item">Advancing research in neural network approximation, biometrics, and machine learning for facial image quality improvement and computer vision.</li>
-            <li class="list-item">Exploring automated graphics generation and real-time image processing using deep learning techniques.</li>
-            <li class="list-item">Specializing in predictive modeling, regression analysis, and correlation studies for data-driven solutions.</li>
-            <li class="list-item">Developing advanced image reconstruction and enhancement methods with neural network-based approaches.</li>
-            <li class="list-item">Keen on bridging the gap between artificial intelligence and mathematics through innovative research.</li>
-        </ul>
-        
-
-        <!-- Skills Section -->
-        <h2 class="section-title">Skills</h2>
-        <div class="skills">
-            <div class="skill-card">
-                <h4>Programming Skills</h4>
-                <p>Python, C, SQL, MATLAB</p>
-            </div>
-            <div class="skill-card">
-                <h4>Deep Learning Frameworks</h4>
-                <p>TensorFlow, PyTorch, JAX, Flax, Keras</p>
-            </div>
-            <div class="skill-card">
-                <h4>Machine Learning Frameworks</h4>
-                <p>Scikit-Learn, XGBoost, LightGBM, Beautyful</p>
-            </div>
-            <div class="skill-card">
-                <h4>Version Control Tools</h4>
-                <p>Git, GitHub</p>
-            </div>
-            <div class="skill-card">
-                <h4>Web Development</h4>
-                <p>HTML, CSS, JavaScript</p>
-            </div>
-            <div class="skill-card">
-                <h4>Mathematical Tools</h4>
-                <p>Wolfram Mathematica, Excel</p>
-            </div>
-            <div class="skill-card">
-                <h4>Data Science</h4>
-                <p>Pandas, NumPy, Scikit-Learn, Power BI</p>
-            </div>
-            <div class="skill-card">
-                <h4>Other Skills</h4>
-                <p>Canva(Designing), LaTeX, MS Office</p>
-            </div>
-            
-        </div>
-    </div>
+    <main class="container" id="main">
+<h1 class="page-title">About Mahesh</h1>
+<p class="section-intro">Ph.D. researcher and Junior Research Fellow at IIT Tirupati, working with Dr. Kalidas Yeturu. My work connects mathematics, computer vision, document intelligence, and deployed research systems.</p>
+<section class="packed-section" id="education">
+<h2 class="section-title">Education</h2>
+<div class="packed-grid">
+<article class="education-card">
+<h3>Ph.D. in Computer Science and Engineering</h3>
+<p>Indian Institute of Technology Tirupati, Tirupati, Andhra Pradesh</p>
+<p>July 2025 – Present · Current CGPA: 8.64/10</p>
+</article>
+<article class="education-card">
+<h3>Integrated M.Sc. in Mathematics</h3>
+<p>Sardar Vallabhbhai National Institute of Technology, Surat, Gujarat</p>
+<p>December 2020 – June 2025 · Final CGPA: 7.68/10</p>
+</article>
+<article class="education-card">
+<h3>Higher Secondary</h3>
+<p>Sri Sarada Educational Institutions, Vijayawada, Andhra Pradesh</p>
+<p>June 2018 – February 2020 · CGPA: 8.82/10</p>
+</article>
+<article class="education-card">
+<h3>SSC</h3>
+<p>Bhashyam E.M High School, Bhavanipuram, Andhra Pradesh</p>
+<p>March 2018 · CGPA: 9.80/10</p>
+</article>
+</div>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">Research Areas</h2>
+<ul>
+<li class="list-item">Heritage-document analysis, palm-leaf manuscripts, OCR, and multilingual archival systems.</li>
+<li class="list-item">Structure-aware image segmentation and topology-preserving computer vision.</li>
+<li class="list-item">Privacy-preserving management and controlled reconstruction of text-bearing images.</li>
+<li class="list-item">Face image quality assessment, explainable AI, biometrics, and child face aging.</li>
+<li class="list-item">Neural-network approximation, Gaussian interpolation, image reconstruction, and enhancement.</li>
+</ul>
+</section>
+<section class="packed-section" id="experience">
+<h2 class="section-title">Research Experience</h2>
+<details class="experience-row" open>
+<summary>
+<strong>Junior Research Fellow and Ph.D. Researcher</strong>
+<span>IIT Tirupati · July 2025 – Present</span>
+</summary>
+<p>Heritage-document analysis, structure-aware segmentation, privacy-preserving document management, and face image quality assessment. Translating research into full-stack systems with Docker deployment, institutional hosting, and human-in-the-loop archival workflows.</p>
+<p class="card-meta">Supervisor / PI: Dr. Kalidas Yeturu</p>
+</details>
+<details class="experience-row" open>
+<summary>
+<strong>Graduate Research Intern</strong>
+<span>IIM Mumbai · June 2025 – Present</span>
+</summary>
+<p>Fine-tuned LLM framework for drone delivery with Open-Meteo weather data, dynamic route planning, energy-efficient battery management, and multi-drone coordination. Developed datasets and weather-aware modules for sustainable drone logistics.</p>
+<p class="card-meta">Supervisor / PI: Prof. Manoj K. Tiwari</p>
+</details>
+<details class="experience-row">
+<summary>
+<strong>KAI-X Summer Research Internship</strong>
+<span>KAIST, Daejeon, South Korea · June – August 2024</span>
+</summary>
+<p>CT data-acquisition simulation and image reconstruction using Filtered Back-Projection and deep learning to improve image quality and reduce artifacts.</p>
+<p class="card-meta">Supervisor / PI: Prof. Chang-Ock Lee</p>
+</details>
+<details class="experience-row">
+<summary>
+<strong>Summer Research Internship</strong>
+<span>NIT Calicut · May – June 2024</span>
+</summary>
+<p>Developed the Dynamic Batch Size Adjuster (DBSA), using loss functions and gradient norms to adapt batch sizes for improved training convergence, stability, and efficiency.</p>
+<p class="card-meta">Supervisor / PI: Dr. Pranesh Das</p>
+</details>
+<details class="experience-row">
+<summary>
+<strong>Research Internship</strong>
+<span>SVNIT Surat · Ongoing</span>
+</summary>
+<p>Child face aging through latent-space manipulation and explainable AI for face image quality assessment, with applications in forensics and healthcare.</p>
+<p class="card-meta">Supervisor / PI: Dr. Praveen Kumar Chandaliya</p>
+</details>
+<details class="experience-row">
+<summary>
+<strong>Research Internship (Virtual)</strong>
+<span>Technical University of Munich · September 2023</span>
+</summary>
+<p>3D ultrasound compounding for volume estimation in thyroid diagnostics and multimodal thyroid registration using PyTorch.</p>
+<p class="card-meta">Supervisor / PI: Dr. Nassir Navab</p>
+</details>
+<details class="experience-row">
+<summary>
+<strong>IAS–INSA–NASI Summer Research Fellow</strong>
+<span>IIT Ropar · May – July 2023</span>
+</summary>
+<p>Automatic image enhancement using optimal gamma values and machine learning with TensorFlow, PyTorch, and JAX.</p>
+<p class="card-meta">Supervisor / PI: Dr. Sudarshan Iyengar</p>
+</details>
+<details class="experience-row">
+<summary>
+<strong>Summer Workout in Mathematics &amp; Programming</strong>
+<span>TIFR-CAM, Bengaluru · June 2022</span>
+</summary>
+<p>Statistical learning, regression, classification, dimensionality reduction, Python programming, real analysis, and linear algebra.</p>
+</details>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">M.Sc. Dissertation</h2>
+<article class="packed-card" data-category="">
+<h3>Applications of Neural Network Operators in Image Processing</h3>
+<p class="card-meta">Completed · SVNIT · Dr. Shivam Bajpeyi · Grade: 10/10</p>
+<p>Studied activation functions and Gaussian interpolation for neural-network approximation and image reconstruction.</p>
+</article>
+</section>
+<section class="packed-section" id="skills">
+<h2 class="section-title">Skills</h2>
+<div class="skills">
+<article class="skill-card">
+<h4>Programming</h4>
+<p>Python, C, JavaScript, TypeScript, MATLAB</p>
+</article>
+<article class="skill-card">
+<h4>AI / ML Frameworks</h4>
+<p>PyTorch, TensorFlow, JAX, Flax, Keras, Scikit-Learn, XGBoost, LightGBM</p>
+</article>
+<article class="skill-card">
+<h4>Computer Vision &amp; Research</h4>
+<p>Image segmentation, reconstruction, face image quality assessment, OCR, document image analysis</p>
+</article>
+<article class="skill-card">
+<h4>Full-Stack Development</h4>
+<p>React.js, Vite, HTML, CSS, Flask, Node.js, Express.js, REST APIs</p>
+</article>
+<article class="skill-card">
+<h4>MLOps &amp; DevOps</h4>
+<p>Docker, Nginx, Linux server deployment, containerization, application monitoring and maintenance</p>
+</article>
+<article class="skill-card">
+<h4>Data &amp; Security</h4>
+<p>Database integration, structured data management, authentication, role-based access control</p>
+</article>
+<article class="skill-card">
+<h4>Developer Tools</h4>
+<p>Git, GitHub, API testing, debugging, technical documentation</p>
+</article>
+<article class="skill-card">
+<h4>Other Tools</h4>
+<p>LaTeX, Excel, Power BI, MS Office</p>
+</article>
+</div>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">Funding & Fellowships</h2>
+<div class="packed-grid">
+<article class="packed-card" data-category="">
+<h3>KAI-X Sponsorship</h3>
+<p class="card-meta">
+</p>
+<p>Received 1.5 million KRW and housing for the KAIST summer research internship, June–August 2024.</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>IAS–INSA–NASI Fellowship</h3>
+<p class="card-meta">
+</p>
+<p>Two months of stipend support for summer research at IIT Ropar, May–July 2023.</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>Integrated M.Sc. Funding</h3>
+<p class="card-meta">
+</p>
+<p>Secured complete personal funding for five years of tuition and academic expenses at SVNIT, December 2020–June 2025.</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>SVNIT Alumni Funding</h3>
+<p class="card-meta">
+</p>
+<p>Received alumni funding on two occasions to support academic and research endeavors.</p>
+</article>
+</div>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">Scholastic Achievements</h2>
+<ul>
+<li class="list-item">Selected as one of 16 interns from a competitive global pool for KAI-X 2024 at KAIST, South Korea.</li>
+<li class="list-item">Awarded the IAS–INSA–NASI Summer Research Fellowship to work at IIT Ropar.</li>
+<li class="list-item">Ranked in the top 53,000 among 1 million candidates in JEE Mains 2020.</li>
+<li class="list-item">Secured 7th rank in the National Talent Search Examination conducted in Andhra Pradesh.</li>
+<li class="list-item">Secured zonal 6th rank in the National Mathematics Olympiad.</li>
+</ul>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">Leadership & Responsibility</h2>
+<div class="packed-grid">
+<article class="packed-card" data-category="">
+<h3>Convener · Unnat Bharat Abhiyan</h3>
+<p class="card-meta">SVNIT Surat · 2022–23</p>
+<p>Supported knowledge-driven, inclusive rural development initiatives.</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>Convener · National Mathematics Day</h3>
+<p class="card-meta">Department of Mathematics · SVNIT · 2022</p>
+<p>Organized 11 events at the national level.</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>Head · Media &amp; Designing Committee</h3>
+<p class="card-meta">Academic Affairs Council · 2022–23</p>
+<p>Managed media, posters, and videos for student council programs.</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>Co-Head · Media &amp; Designing Committee</h3>
+<p class="card-meta">General Student Council · 2022–23</p>
+<p>Supported media and visual communication for council programs.</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>Designer · Departmental Publications</h3>
+<p class="card-meta">SVNIT Surat</p>
+<p>Designed the departmental brochure, student handbook, and Pramiti magazine.</p>
+</article>
+</div>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">Courses & Continuing Learning</h2>
+<div class="packed-grid">
+<article class="packed-card" data-category="">
+<h3>MaLICoN 2023</h3>
+<p class="card-meta">NIT Hamirpur · March 13–17, 2023</p>
+<p>Machine learning and its applications in information security, computer vision, and natural language processing.</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>Advanced and Technical Computing with MATLAB</h3>
+<p class="card-meta">Presidency University, Bengaluru · July 25–29, 2023</p>
+<p>Five-day faculty development programme organized by the Department of Mathematics, School of Engineering.</p>
+</article>
+</div>
+<div class="tag-list">
+<span>Data Structures and Algorithms</span>
+<span>Artificial Intelligence</span>
+<span>Computer Networks</span>
+<span>Graph Theory</span>
+<span>Ethical Hacking</span>
+<span>Natural Language Processing</span>
+<span>Blockchain Technology</span>
+<span>Computer Vision</span>
+<span>Computer Graphics</span>
+<span>Database Management Systems</span>
+</div>
+<a class="compact-button" href="https://drive.google.com/file/d/1GsPtWDuhoGoLSUJfbFx3dKq0RNszEx-h/view?usp=sharing">Full course list</a>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">Languages</h2>
+<p>Telugu: Bilingual proficiency · English: Working proficiency · Hindi: Conversational</p>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">Academic References</h2>
+<div class="packed-grid">
+<article class="packed-card" data-category="">
+<h3>Dr. Kalidas Yeturu</h3>
+<p class="card-meta">
+</p>
+<p>Associate Professor, Computer Science and Engineering, IIT Tirupati</p>
+<a class="compact-button" href="https://iittp.ac.in/dr-kalidas-yeturu">Faculty profile</a>
+</article>
+<article class="packed-card" data-category="">
+<h3>Dr. Jayesh M. Dhodiya</h3>
+<p class="card-meta">
+</p>
+<p>Associate Professor, Mathematics, SVNIT</p>
+<a class="compact-button" href="https://sites.google.com/view/drjayeshmdhodiya/home">Faculty profile</a>
+</article>
+<article class="packed-card" data-category="">
+<h3>Dr. Praveen K. Chandaliya</h3>
+<p class="card-meta">
+</p>
+<p>Assistant Professor, Artificial Intelligence, SVNIT</p>
+<a class="compact-button" href="https://www.svnit.ac.in/web/department/ai/faculty.php">Faculty profile</a>
+</article>
+</div>
+</section>
+</main>
+<footer class="site-footer">© <span data-year>2026</span> Mahesh Rajarapu · <a class="footer-link" href="assets/documents/Mahesh_CV.pdf">Latest CV</a> · <a class="footer-link" href="mailto:rajarapumahesh26@gmail.com">Contact</a> · <a class="footer-link" href="#main">Back to top ↑</a>
+</footer>
 </body>
 </html>

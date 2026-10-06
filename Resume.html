@@ -4,182 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Mahesh Rajarapu</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #222; /* Darker background from main page */
-            color: #ddd; /* Lighter text color */
-        }
-
-        header {
-            background-color: #333; /* Darker grey from main page */
-            color: #fff; /* White text */
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Main Content Area */
-        .main-content {
-            margin-left: 20%;
-            padding: 20px;
-            padding-top: 80px;
-        }
-
-        .social-bar {
-            width: 100%;
-            height: 1.5cm;
-            background-color: #333;
-            border-bottom: 2px solid orange;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 0px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 100;
-        }
-
-        .social-bar .logo-title {
-            font-family: 'Georgia', serif;
-            font-size: 24px;
-            font-weight: bold;
-            padding-left: 30px;
-            color: orange;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #444;
-            transition: background-color 0.3s;
-        }
-
-        .social-links a:hover {
-            background-color: orange;
-        }
-
-        .social-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            position: relative;
-            overflow: hidden;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .social-links a:hover {
-            background-color: #444;
-            color: orange;
-        }
-
-        .social-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: orange;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .social-links a:hover::after {
-            transform: scaleX(1);
-        }
-
-
-        /* Resume Page Styles */
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px 0;
-            padding-top: 100px; /* Adjusted for fixed header */
-        }
-
-        .resume-section {
-            background-color: #333; /* Dark grey */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-        }
-
-        .resume-section p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #ddd; /* Light grey text */
-        }
-
-        .resume-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #800080; /* Purple color */
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s ease-in-out;
-        }
-
-        .resume-button:hover {
-            background-color: #6a006a; /* Darker purple on hover */
-            transform: scale(1.05);
-        }
-
-        .confirmation-text {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 30px;
-            color: #fff; /* White text */
-            text-align: center;
-            padding: 20px;
-            background-color: #444;
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/resume.css">
+    <link rel="stylesheet" href="assets/css/enhancements.css">
+    <script src="assets/js/enhancements.js" defer>
+</script>
+    <meta name="description" content="Mahesh Rajarapu, Ph.D. researcher at IIT Tirupati. Computer vision, document intelligence, privacy-preserving systems, and research software.">
+    <meta name="theme-color" content="#222222">
+<link rel="canonical" href="https://rajarapumahesh.github.io/My-website/Resume.html">
+<meta property="og:title" content="Resume - Mahesh Rajarapu">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rajarapumahesh.github.io/My-website/Resume.html">
+<meta property="og:image" content="https://rajarapumahesh.github.io/My-website/assets/images/mahesh_profile.jpg">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
     <!-- Social Bar -->
     <div class="social-bar">
         <div class="logo-title">Resume</div>
-        <div class="social-links">
-            <a href="index.html" id="main-link">Home</a>
-            <a href="About.html" id="about-link">About</a>
-            <a href="Resume.html" id="resume-link">Resume</a>
-            <a href="Reports.html" id="reports-link">Reports/Notes</a>
-            <a href="Publications.html" id="publication-link">Publications</a>
-            <a href="Talks.html" id="talks-link">Talks & Presentations</a>
-        </div>
+        <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">Menu ☰</button>
+<nav class="social-links" id="site-navigation" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="About.html">About</a>
+<a href="Resume.html" aria-current="page">Resume</a>
+<a href="Reports.html">Reports/Notes</a>
+<a href="Publications.html">Publications</a>
+<a href="Projects.html">Projects</a>
+<a href="Talks.html">Talks & Presentations</a>
+</nav>
     </div>
 
     <!-- Resume Page Content -->
-    <div class="container">
-        
-        <!-- Resume Content Section -->
-        <div class="resume-section">
-            <p>I hereby confirm that the details provided in my CV are true and accurate to the best of my knowledge. I would like to express my heartfelt thanks to everyone who has supported me throughout this process.</p>
-            
-            <p class="confirmation-text">Thank you.</p>
-            
-            <!-- Resume Button -->
-            <p>For my resume, please click the button below:</p>
-            <a href="https://drive.google.com/file/d/1vT_r7i40dgYr4OdS0wdlZsETygsXfKgH/view?usp=sharing" id="resume-link" class="resume-button">Please Click Here for Resume</a> <!-- Link to be updated later -->
-        </div>
-    </div>
+    <main class="container" id="main">
+<h1 class="page-title">Curriculum Vitae</h1>
+<div class="resume-section">
+<h2>Mahesh Rajarapu</h2>
+<p>Ph.D. Researcher & Junior Research Fellow<br>Department of Computer Science and Engineering<br>Indian Institute of Technology Tirupati</p>
+<p>Research: Document intelligence · Computer vision · Privacy-preserving systems · Face image quality</p>
+<div class="compact-actions">
+<a class="resume-button" href="assets/documents/Mahesh_CV.pdf" download>Download latest CV ↓</a>
+<a class="compact-button" href="assets/documents/Mahesh_CV.pdf">Open PDF ↗</a>
+</div>
+<p class="card-meta">Full academic and research curriculum vitae.</p>
+</div>
+<section class="packed-section" id="">
+<h2 class="section-title">Academic Snapshot</h2>
+<div class="packed-grid">
+<article class="packed-card" data-category="">
+<h3>Ph.D. in Computer Science and Engineering</h3>
+<p class="card-meta">July 2025 – Present · Current CGPA: 8.64/10</p>
+<p>Indian Institute of Technology Tirupati, Tirupati, Andhra Pradesh</p>
+</article>
+<article class="packed-card" data-category="">
+<h3>Integrated M.Sc. in Mathematics</h3>
+<p class="card-meta">December 2020 – June 2025 · Final CGPA: 7.68/10</p>
+<p>Sardar Vallabhbhai National Institute of Technology, Surat, Gujarat</p>
+</article>
+</div>
+</section>
+<details class="pdf-preview">
+<summary>Preview the full CV</summary>
+<iframe title="Mahesh Rajarapu curriculum vitae" data-pdf-src="assets/documents/Mahesh_CV.pdf#view=FitH">
+</iframe>
+<p>
+<a class="compact-button" href="assets/documents/Mahesh_CV.pdf">Open PDF if the preview is unavailable</a>
+</p>
+</details>
+<section class="packed-section" id="">
+<h2 class="section-title">Quick Links</h2>
+<div class="compact-actions">
+<a class="compact-button" href="About.html#experience">Research experience</a>
+<a class="compact-button" href="Publications.html">Publications &amp; patent</a>
+<a class="compact-button" href="Projects.html">Projects &amp; software</a>
+<a class="compact-button" href="mailto:rajarapumahesh26@gmail.com">Email me</a>
+</div>
+</section>
+<section class="packed-section" id="">
+<h2 class="section-title">Contact</h2>
+<p>Tirupati, Andhra Pradesh, India<br>
+<a class="compact-button" href="mailto:rajarapumahesh26@gmail.com">rajarapumahesh26@gmail.com</a> <a class="compact-button" href="tel:+919652382413">+91 96523 82413</a>
+</p>
+<div class="compact-actions">
+<a class="compact-button" href="https://www.linkedin.com/in/rajarapu-mahesh-4ab06a1a9/">LinkedIn</a>
+<a class="compact-button" href="https://github.com/rajarapumahesh">GitHub</a>
+<a class="compact-button" href="https://leetcode.com/MaheshRajarapu/">LeetCode</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">© <span data-year>2026</span> Mahesh Rajarapu · <a class="footer-link" href="assets/documents/Mahesh_CV.pdf">Latest CV</a> · <a class="footer-link" href="mailto:rajarapumahesh26@gmail.com">Contact</a> · <a class="footer-link" href="#main">Back to top ↑</a>
+</footer>
 </body>
 </html>

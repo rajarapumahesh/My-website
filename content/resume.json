@@ -1,0 +1,96 @@
+{
+  "source": "assets/documents/Mahesh_CV.pdf",
+  "name": "Mahesh Rajarapu",
+  "role": "Ph.D. Researcher & Junior Research Fellow",
+  "institution": "Indian Institute of Technology Tirupati",
+  "supervisor": "Dr. Kalidas Yeturu",
+  "email": "rajarapumahesh26@gmail.com",
+  "education": [
+    ["Ph.D. in Computer Science and Engineering", "Indian Institute of Technology Tirupati, Tirupati, Andhra Pradesh", "July 2025 – Present", "Current CGPA: 8.64/10"],
+    ["Integrated M.Sc. in Mathematics", "Sardar Vallabhbhai National Institute of Technology, Surat, Gujarat", "December 2020 – June 2025", "Final CGPA: 7.68/10"],
+    ["Higher Secondary", "Sri Sarada Educational Institutions, Vijayawada, Andhra Pradesh", "June 2018 – February 2020", "CGPA: 8.82/10"],
+    ["SSC", "Bhashyam E.M High School, Bhavanipuram, Andhra Pradesh", "March 2018", "CGPA: 9.80/10"]
+  ],
+  "experience": [
+    ["Junior Research Fellow and Ph.D. Researcher", "IIT Tirupati", "July 2025 – Present", "Dr. Kalidas Yeturu", "Heritage-document analysis, structure-aware segmentation, privacy-preserving document management, and face image quality assessment. Translating research into full-stack systems with Docker deployment, institutional hosting, and human-in-the-loop archival workflows."],
+    ["Graduate Research Intern", "IIM Mumbai", "June 2025 – Present", "Prof. Manoj K. Tiwari", "Fine-tuned LLM framework for drone delivery with Open-Meteo weather data, dynamic route planning, energy-efficient battery management, and multi-drone coordination. Developed datasets and weather-aware modules for sustainable drone logistics."],
+    ["KAI-X Summer Research Internship", "KAIST, Daejeon, South Korea", "June – August 2024", "Prof. Chang-Ock Lee", "CT data-acquisition simulation and image reconstruction using Filtered Back-Projection and deep learning to improve image quality and reduce artifacts."],
+    ["Summer Research Internship", "NIT Calicut", "May – June 2024", "Dr. Pranesh Das", "Developed the Dynamic Batch Size Adjuster (DBSA), using loss functions and gradient norms to adapt batch sizes for improved training convergence, stability, and efficiency."],
+    ["Research Internship", "SVNIT Surat", "Ongoing", "Dr. Praveen Kumar Chandaliya", "Child face aging through latent-space manipulation and explainable AI for face image quality assessment, with applications in forensics and healthcare."],
+    ["Research Internship (Virtual)", "Technical University of Munich", "September 2023", "Dr. Nassir Navab", "3D ultrasound compounding for volume estimation in thyroid diagnostics and multimodal thyroid registration using PyTorch."],
+    ["IAS–INSA–NASI Summer Research Fellow", "IIT Ropar", "May – July 2023", "Dr. Sudarshan Iyengar", "Automatic image enhancement using optimal gamma values and machine learning with TensorFlow, PyTorch, and JAX."],
+    ["Summer Workout in Mathematics & Programming", "TIFR-CAM, Bengaluru", "June 2022", "", "Statistical learning, regression, classification, dimensionality reduction, Python programming, real analysis, and linear algebra."]
+  ],
+  "research_areas": [
+    "Heritage-document analysis, palm-leaf manuscripts, OCR, and multilingual archival systems.",
+    "Structure-aware image segmentation and topology-preserving computer vision.",
+    "Privacy-preserving management and controlled reconstruction of text-bearing images.",
+    "Face image quality assessment, explainable AI, biometrics, and child face aging.",
+    "Neural-network approximation, Gaussian interpolation, image reconstruction, and enhancement."
+  ],
+  "skills": [
+    ["Programming", "Python, C, JavaScript, TypeScript, MATLAB"],
+    ["AI / ML Frameworks", "PyTorch, TensorFlow, JAX, Flax, Keras, Scikit-Learn, XGBoost, LightGBM"],
+    ["Computer Vision & Research", "Image segmentation, reconstruction, face image quality assessment, OCR, document image analysis"],
+    ["Full-Stack Development", "React.js, Vite, HTML, CSS, Flask, Node.js, Express.js, REST APIs"],
+    ["MLOps & DevOps", "Docker, Nginx, Linux server deployment, containerization, application monitoring and maintenance"],
+    ["Data & Security", "Database integration, structured data management, authentication, role-based access control"],
+    ["Developer Tools", "Git, GitHub, API testing, debugging, technical documentation"],
+    ["Other Tools", "LaTeX, Excel, Power BI, MS Office"]
+  ],
+  "publications": [
+    {"id":"mu-fiqa","title":"MU-FIQA: Verification-Margin Supervision and Dual-Stream Fusion for Face Image Quality Assessment","authors":"Mahesh Rajarapu, Praveen Kumar Chandaliya, Vishnu Chalavadi, Kiran Raja","venue":"BIOSIG 2026","category":"accepted","status":"Accepted","summary":"Combines verification-margin supervision with dual-stream feature fusion to estimate face-image utility for reliable recognition."},
+    {"id":"neural-operators","title":"Applications and Performance Analysis of Neural Network Operators in Image Processing","authors":"Mahesh Rajarapu, Shivam Bajpeyi","venue":"Neural Networks Approximation with Applications in the AI Age · Springer","category":"accepted","status":"Accepted book chapter","summary":"Investigates neural-network operators and analyzes their efficiency and effectiveness in image processing."},
+    {"id":"akshara","title":"AKSHARA: Attention-based Knowledge-preserving Segmentation for Heritage Archival Region Analysis","authors":"Mahesh Rajarapu, Vamshi Krishna Shanigarapu, Sahasvat R, Kalidas Yeturu","venue":"Submitted to CIKM 2026","category":"submitted","status":"Submitted; under review","summary":"Attention-based, knowledge-preserving text-region segmentation for retrieval and analysis of degraded palm-leaf manuscript folios."},
+    {"id":"privview","title":"PrivView: Reconstructable Views for Privacy-Preserving Management of Text-Bearing Images","authors":"Mahesh Rajarapu, Kalidas Yeturu","venue":"Submitted to SIGMOD 2027","category":"submitted","status":"Submitted; under review","summary":"OCR-resistant views that prevent unauthorized text extraction while enabling controlled server-side reconstruction for restricted collections."},
+    {"id":"segvfnet","title":"SegVFNet: Learning Skeleton-Guided Vector Fields for Structure-Aware Semantic Segmentation","authors":"Mahesh Rajarapu, Kalidas Yeturu","venue":"Submitted to WACV 2027 · Algorithms Track","category":"submitted","status":"Submitted; under review","summary":"Learns skeleton-guided vector fields to preserve topology and improve structural consistency in semantic segmentation."},
+    {"id":"gaussian","title":"Application of Gaussian Activated Neural Network in Image Processing","authors":"Mahesh Rajarapu, Shivam Bajpeyi","venue":"Submitted to Neurocomputing","category":"submitted","status":"Submitted","summary":"Gaussian-activated neural-network models and interpolation methods for image processing and improved reconstruction accuracy."},
+    {"id":"dbsa","title":"Dynamic Batch Size Adjuster (DBSA): Enhancing Deep Learning Training Efficiency","authors":"Mahesh Rajarapu, Pranesh Das, Ebrahim Ghaderpour","venue":"NIT Calicut · Machine Learning Laboratory","category":"submitted","status":"Submitted","summary":"An adaptive batch-size mechanism to improve neural-network convergence, training efficiency, and stability."},
+    {"id":"annotation-patent","title":"Computer-Implemented System and Method for Multi-Mode Digital Annotation of Image-Based Textual Records","authors":"Mahesh Rajarapu, Kalidas Yeturu","venue":"Indian Patent Application No. 202641075717","category":"patent","status":"Published patent application","summary":"Filed June 18, 2026; published June 26, 2026. A system and method for multi-mode annotation of image-based textual records."}
+  ],
+  "tools": [
+    ["ShreeAkshara Annotation Platform", "Human-in-the-loop palm-leaf annotation and multilingual transcription with automatic region segmentation, multilayer bounding-box editing, validation workflows, and JSON/PDF export.", "React.js · Vite · Flask REST API · Node.js · Docker", "https://services.iittp.ac.in/shri/annotator", "Document AI"],
+    ["ANVESHANA: Searchable PDF Platform", "Secure manuscript retrieval with transliteration-based browsing, full-text search, matched-folio visualization, and controlled archival access.", "React.js · Flask REST API · Node.js", "https://services.iittp.ac.in/shri/anveshana/", "Document AI"],
+    ["Palm Leaf Denoiser", "Restores degraded manuscript scans, extracts text-bearing regions, and exports cleaned folio images for transcription and archival use.", "React.js · Flask REST API · Node.js", "https://services.iittp.ac.in/shri/denoiser/", "Document AI"],
+    ["Kali-OMR", "Automated OMR evaluation with geometric correction, bubble detection, configurable scoring, manual verification, and CSV/PDF reporting.", "Flask REST API · Node.js · Twilio services", "https://services.iittp.ac.in/shri/kali-omr/", "Computer Vision"]
+  ],
+  "projects": [
+    ["CT Simulation and Image Reconstruction", "Simulates CT acquisition and implements Filtered Back-Projection reconstruction. Explores deep learning to reduce artifacts and improve image quality. Mentor: Prof. Chang-Ock Lee, KAIST.", "Computed tomography · FBP · Deep learning", "", "Computer Vision"],
+    ["Real-time Object Detection", "YOLOv8-based object detection in video streams for real-time visual assistance.", "YOLOv8 · Computer vision", "https://github.com/rajarapumahesh/Accessible-Navigation-for-Visually-Impaired-YOLO-CV", "Computer Vision"],
+    ["Image CompressNet", "Encoder-decoder architecture for binary image reconstruction, using convolutional and upsampling layers in the Keras Functional API.", "Keras · Autoencoders · Image reconstruction", "https://github.com/rajarapumahesh/ImageCompressNet-Deep-Learning-Based-Image-Compression-using-Encoder-Decoder-Architecture/tree/main", "Computer Vision"],
+    ["Auto Image Enhancement", "Optimal gamma values, power-law transformations, CLAHE, scaling, and CNN models for contrast, brightness, and saturation.", "CNN · CLAHE · Gamma correction", "https://github.com/rajarapumahesh/Power-Law-Gamm-Values", "Computer Vision"],
+    ["Chronic Kidney Disease Prediction", "Evaluates machine learning algorithms to identify an effective model for kidney disease prediction.", "Machine learning · Classification", "https://github.com/rajarapumahesh/Chronic-Kidney-Disease-Prediction-Using-ML-Tech", "Machine Learning"],
+    ["Face Recognition & Attendance Management", "Deep learning-based face identification and attendance logging for entry-gate operations.", "Deep learning · Biometrics", "https://github.com/rajarapumahesh/Automated-Face-Recognition-and-Attendance-Management-System", "Computer Vision"],
+    ["Weather-Aware Drone Delivery", "Fine-tuned LLM framework for dynamic route planning, battery management, and multi-drone coordination with real-time meteorological data, developed during the IIM Mumbai internship.", "LLM · Open-Meteo API · Drone logistics", "", "Machine Learning"]
+  ],
+  "funding": [
+    ["KAI-X Sponsorship", "Received 1.5 million KRW and housing for the KAIST summer research internship, June–August 2024."],
+    ["IAS–INSA–NASI Fellowship", "Two months of stipend support for summer research at IIT Ropar, May–July 2023."],
+    ["Integrated M.Sc. Funding", "Secured complete personal funding for five years of tuition and academic expenses at SVNIT, December 2020–June 2025."],
+    ["SVNIT Alumni Funding", "Received alumni funding on two occasions to support academic and research endeavors."]
+  ],
+  "achievements": [
+    "Selected as one of 16 interns from a competitive global pool for KAI-X 2024 at KAIST, South Korea.",
+    "Awarded the IAS–INSA–NASI Summer Research Fellowship to work at IIT Ropar.",
+    "Ranked in the top 53,000 among 1 million candidates in JEE Mains 2020.",
+    "Secured 7th rank in the National Talent Search Examination conducted in Andhra Pradesh.",
+    "Secured zonal 6th rank in the National Mathematics Olympiad."
+  ],
+  "leadership": [
+    ["Convener · Unnat Bharat Abhiyan", "SVNIT Surat · 2022–23", "Supported knowledge-driven, inclusive rural development initiatives."],
+    ["Convener · National Mathematics Day", "Department of Mathematics · SVNIT · 2022", "Organized 11 events at the national level."],
+    ["Head · Media & Designing Committee", "Academic Affairs Council · 2022–23", "Managed media, posters, and videos for student council programs."],
+    ["Co-Head · Media & Designing Committee", "General Student Council · 2022–23", "Supported media and visual communication for council programs."],
+    ["Designer · Departmental Publications", "SVNIT Surat", "Designed the departmental brochure, student handbook, and Pramiti magazine."]
+  ],
+  "courses": [
+    ["MaLICoN 2023", "NIT Hamirpur · March 13–17, 2023", "Machine learning and its applications in information security, computer vision, and natural language processing."],
+    ["Advanced and Technical Computing with MATLAB", "Presidency University, Bengaluru · July 25–29, 2023", "Five-day faculty development programme organized by the Department of Mathematics, School of Engineering."]
+  ],
+  "electives": ["Data Structures and Algorithms", "Artificial Intelligence", "Computer Networks", "Graph Theory", "Ethical Hacking", "Natural Language Processing", "Blockchain Technology", "Computer Vision", "Computer Graphics", "Database Management Systems"],
+  "references": [
+    ["Dr. Kalidas Yeturu", "Associate Professor, Computer Science and Engineering, IIT Tirupati", "https://iittp.ac.in/dr-kalidas-yeturu"],
+    ["Dr. Jayesh M. Dhodiya", "Associate Professor, Mathematics, SVNIT", "https://sites.google.com/view/drjayeshmdhodiya/home"],
+    ["Dr. Praveen K. Chandaliya", "Assistant Professor, Artificial Intelligence, SVNIT", "https://www.svnit.ac.in/web/department/ai/faculty.php"]
+  ]
+}

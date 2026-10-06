@@ -1,0 +1,12 @@
+{
+  "name": "mahesh-portfolio-likes",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "durable_objects": {
+    "bindings": [{"name": "LIKES", "class_name": "PortfolioLikes"}]
+  },
+  "migrations": [{"tag": "v1", "new_sqlite_classes": ["PortfolioLikes"]}],
+  "vars": {
+    "ALLOWED_ORIGINS": "https://rajarapumahesh.github.io,http://localhost:8000,http://127.0.0.1:8000"
+  }
+}
