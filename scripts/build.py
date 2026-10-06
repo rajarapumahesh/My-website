@@ -69,7 +69,6 @@ def finish(document, filename):
     document = re.sub(r'<footer>.*?</footer>', '', document, flags=re.S)
     footer = '<footer class="site-footer">© <span data-year>2026</span> Mahesh Rajarapu · '+link('assets/documents/Mahesh_CV.pdf','Latest CV','footer-link')+' · '+link('mailto:'+DATA['email'],'Contact','footer-link')+' · <a class="footer-link" href="#main">Back to top ↑</a></footer>'
     document = document.replace('</body>', footer+'\n</body>')
-    document = document.replace('id="like-button"', 'id="like-button" aria-label="Like this portfolio"')
     document = document.replace('alt="Presentation 1"', 'alt="Neural network dissertation presentation"').replace('alt="Presentation 2"', 'alt="Internship insights seminar at SVNIT"').replace('alt="Presentation 3"', 'alt="KAI-X internship at KAIST"').replace('alt="Presentation 4"', 'alt="Low-cost manufacturing project at UNNATI Mahotsav"')
     document = re.sub(r'<img(?![^>]*mahesh_profile)([^>]+)>', r'<img loading="lazy"\1>', document)
     document = re.sub(r'target="_blank"(?! rel=)', 'target="_blank" rel="noopener noreferrer"', document)
@@ -79,10 +78,6 @@ def finish(document, filename):
 
 
 home = template('index.html').replace('Int. M.Sc. student at SVNIT, India', 'Ph.D. Researcher at IIT Tirupati, India')
-home = home.replace('<script src="assets/js/home.js"', '<script src="assets/js/likes-config.js" defer></script>\n    <script src="assets/js/home.js"')
-home = home.replace('id="like-button"', 'id="like-button" aria-pressed="false"')
-home = home.replace('id="like-count"', 'id="like-count" aria-live="polite"')
-home = re.sub(r'(<span id="like-count"[^>]*>.*?</span>\s*</div>)', r'\1\n        <p class="like-status" id="like-status" role="status"></p>', home, count=1, flags=re.S)
 accepted_count = sum(p['category'] == 'accepted' for p in DATA['publications'])
 sidebar_snapshot = (
     '<section class="sidebar-snapshot" aria-labelledby="snapshot-title">'

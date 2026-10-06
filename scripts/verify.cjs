@@ -10,8 +10,6 @@ const path = require('node:path');
     const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
     try {
         const context = await browser.newContext({ permissions: ['clipboard-read', 'clipboard-write'] });
-        // Exercise the standalone preview fallback; shared hearts have their own real-backend checks.
-        await context.route('**/assets/js/likes-config.js', route => route.fulfill({contentType:'application/javascript',body:'window.PORTFOLIO_LIKES={endpoint:""};'}));
         const page = await context.newPage();
         const errors = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -74,9 +72,7 @@ const path = require('node:path');
         await page.keyboard.press('Escape');
         assert(!(await page.locator('#site-navigation').isVisible()));
         await page.goto('http://localhost:8000/index.html');
-        const before = Number(await page.locator('#like-count').textContent());
-        await page.locator('#like-button').click(); await page.reload();
-        assert.equal(Number(await page.locator('#like-count').textContent()), before + 1);
+        assert.equal(await page.locator('#like-button, #like-count, #like-status').count(), 0);
 
         const noJsContext = await browser.newContext({ javaScriptEnabled: false, viewport: {width:390,height:900} });
         const noJsPage = await noJsContext.newPage();
@@ -88,7 +84,7 @@ const path = require('node:path');
         await noJsContext.close();
 
         // Confirm the core palette, typography, and banner remain those of the original.
-        const original = execFileSync('git', ['-c', `safe.directory=${root.replaceAll('\\','/')}`, 'show', 'HEAD:index.html'], {cwd: root, encoding:'utf8'});
+        const original = execFileSync('git', ['-c', `safe.directory=${root.replaceAll('\\','/')}`, 'show', 'ebb0e4741f6febe95defc3be272083b5f735bc86:index.html'], {cwd: root, encoding:'utf8'});
         await page.route('**/index.html?original=1', route => route.fulfill({contentType:'text/html',body:original}));
         await page.setViewportSize({width:1903,height:1000});
         const identity = () => page.evaluate(() => Object.fromEntries(['body','.sidebar','.landscape-frame','.quote-text','.quote-author','.social-bar .logo-title','.contact-info a'].map(selector => {
@@ -108,6 +104,6 @@ const path = require('node:path');
             }
         }
         assert.deepEqual(errors, []);
-        console.log('PASS: 7 pages at 5 widths; original visual identity; local links; CV; filters; reference copy; feedback drafts; PDF preview; mobile menu; likes; no-JavaScript content/navigation; no JS errors.');
+        console.log('PASS: 7 pages at 5 widths; original visual identity; local links; CV; filters; reference copy; feedback drafts; PDF preview; mobile menu; no likes UI; no-JavaScript content/navigation; no JS errors.');
     } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

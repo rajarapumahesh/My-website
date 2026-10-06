@@ -278,28 +278,3 @@ body {
 .updates-table tr:nth-child(odd) {
     background-color: #222;
 }
-#like-section {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Small gap between the heart icon and the count */
-    margin-top: 10px; /* Adjust spacing as needed */
-}
-
-#like-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-#like-button img {
-    width: 20px; /* Smaller heart icon */
-    height: 20px;
-}
-
-#like-count {
-    font-size: 14px; /* Smaller font size */
-    color: #fff; /* Match your theme */
-}
-
-

@@ -19,16 +19,13 @@ scripts/build.py            Static page generator (Python standard library only)
 scripts/verify.cjs           Optional browser verification
 assets/css/*.css             Original page-specific theme styles
 assets/css/enhancements.css  Compact cards, filters, accessibility, responsive layout
-assets/js/home.js            Persistent hearts client, refresh/retry handling, local fallback
-assets/js/likes-config.js    Public counter endpoint and local preview configuration
 assets/js/reports.js         Resource feedback drafts and accessible modal
 assets/js/enhancements.js    Shared navigation, search/filtering, reference copy, PDF preview
 *.html                      Generated pages served directly by GitHub Pages
 assets/images/              Portraits, banner, and presentation photos
-assets/icons/               Social icons and heart icon
+assets/icons/               Social icons
 assets/documents/           Latest CV, previous resume, and existing PDFs
 sitemap.xml                 Generated canonical page URLs
-backend/likes/              Deployable Cloudflare Worker and SQLite-backed counter
 ```
 
 Images and PDFs are grouped under `assets/`. Filenames are retained, and page
@@ -67,13 +64,6 @@ own access permissions.
 
 Source of current academic facts: `assets/documents/Mahesh_CV.pdf`. Publication
 statuses and ongoing appointments follow that CV and require future maintenance.
-The heart counter is prepared for shared persistent storage. Each browser profile
-can contribute one heart; retries and reloads do not add duplicates. Set the
-deployed URL in `assets/js/likes-config.js` to activate public shared hearts.
-The backend is documented in [backend/likes/README.md](backend/likes/README.md).
-The current public endpoint is not configured. On localhost, the frontend uses
-Wrangler's running local backend; without a public endpoint elsewhere it explicitly
-labels the browser-only fallback as a local preview.
 
 ## Validation
 
@@ -91,11 +81,6 @@ PDF, combined filters, copied references, feedback drafts, PDF loading, mobile
 navigation, and JavaScript errors. Screenshots are saved under ignored
 `artifacts/`.
 
-For shared-heart integration checks, start the local Worker with `npm run dev`
-inside `backend/likes`, then run `node scripts/verify-likes.cjs`. This uses a real
-local Worker and persistent SQLite storage, verifying separate browser totals,
-reloads, concurrent duplicates, and a lost-response retry. Backend SQL tests run
-with Node 22+: `npm test` inside `backend/likes`.
 
 ## Publishing
 
