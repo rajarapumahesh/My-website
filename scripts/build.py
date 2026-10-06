@@ -98,7 +98,7 @@ intro = [
     'I enjoy taking ideas from mathematical foundations to practical software. Alongside research, I have developed <strong style="color: #8e44ad;">ShreeAkshara, ANVESHANA, Palm Leaf Denoiser, and Kali-OMR</strong>: platforms for annotation, archival retrieval, image restoration, and automated evaluation. My work combines computer vision with full-stack development, Docker deployment, and human-in-the-loop workflows.',
     'My journey includes research experiences at <strong style="color: #8e44ad;">KAIST, IIM Mumbai, NIT Calicut, SVNIT, TU Munich, IIT Ropar, and TIFR-CAM</strong>. Curiosity and the pursuit of new experiences continue to drive my work. I welcome conversations about research, collaborations, and building useful AI systems.'
 ]
-intro_html = ''.join('<p style="font-family: \'Courier New\', Courier, monospace; font-size: 16px; line-height: 1.6; color: #d1d8e6;">'+p+'</p>' for p in intro)
+intro_html = ''.join('<p style="font-family: \'Courier New\', Courier, monospace; font-size: 18px; line-height: 1.75; color: #d1d8e6;">'+p+'</p>' for p in intro)
 home = re.sub(r'(<div class="info">).*?(?=<!-- Reach out section -->)', r'\1\n'+intro_html+'\n', home, count=1, flags=re.S)
 highlights = section('Research Highlights', grid([
     card('MU-FIQA · BIOSIG 2026', 'Verification-margin supervision and dual-stream fusion for face image quality assessment.', 'Accepted conference paper', 'Publications.html#mu-fiqa', 'Research details'),
